@@ -1,4 +1,4 @@
-**Data Structures and Algorithm Presentation March 18, 2025**
+**Data Structures and Algorithms Presentation March 18, 2025**
 
 **Group Members:** <br/>
 Justin Louis Dampal - leader <br/>
