@@ -60,7 +60,7 @@ def selection_sort(arr):
     arr = arr.copy()
     n = len(arr)
     for i in range(n):
-        min_idx = i  # Fixed: changed from 1 to i
+        min_idx = i
         for j in range(i + 1, n):
             if arr[j] < arr[min_idx]:
                 min_idx = j
@@ -126,9 +126,8 @@ def main():
         return
        
     print("Choose search method:")
-    print("1. Linear Search (unsorted)")
-    print("2. Linear Search (sorted)")
-    print("3. Binary Search")
+    print("1. Linear Search")
+    print("2. Binary Search")
     print("Enter choice:", end=" ")
     search_choice = input().strip()
    
@@ -136,12 +135,8 @@ def main():
    
     if search_choice == "1":
         index, time_taken = linear_search(column_values, search_value)
-        method = "Linear Search (unsorted)"
+        method = "Linear Search"
     elif search_choice == "2":
-        sorted_values = sorted(column_values)
-        index, time_taken = sorted_linear_search(sorted_values, search_value)
-        method = "Linear Search (sorted)"
-    elif search_choice == "3":
         sorted_values = sorted(column_values)
         index, time_taken = binary_search(sorted_values, search_value)
         method = "Binary Search"
@@ -150,7 +145,7 @@ def main():
         return
        
     if index != -1:
-        if search_choice in ["2", "3"]:
+        if search_choice == "2":
             original_index = column_values.index(sorted_values[index])
             print(f"{method}: Found at row index {original_index}")
         else:
