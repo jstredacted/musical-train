@@ -191,7 +191,7 @@ def main():
     # Create sorted DataFrame and save to CSV
     sorted_indices = [column_values.index(x) for x in sorted_values if x in column_values]
     sorted_df = df.iloc[sorted_indices].reset_index(drop=True)
-    sorted_df.to_csv('sorted-diabetes.csv', index=False)
+    sorted_df.to_csv('test_sorted-diabetes.csv', index=False)
    
     print("Sorting completed.")
     print('Sorted data saved as "sorted-diabetes.csv".')
